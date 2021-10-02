@@ -11,7 +11,7 @@ logs/
 *.pid
 *.toc
 *.out
-*.pickle
 celerybeat-schedule                                                                     
 .ipynb_checkpoints
 .venv/
+src/.env
