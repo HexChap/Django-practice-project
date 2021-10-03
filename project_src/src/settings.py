@@ -11,7 +11,11 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+
 from dotenv import load_dotenv
+from django.conf import settings
+
+settings.configure()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -28,6 +32,11 @@ DATABASE_PORT = os.getenv("DATABASE_PORT")
 
 MAILCHIMP_USERNAME = os.getenv("MAILCHIMP_USERNAME")
 MAILCHIMP_APIKEY = os.getenv("MAILCHIMP_APIKEY")
+MAILCHIMP_AUDIENCES = {
+    "COMMON": "001",
+    "CASES": "002",
+    "DONATES": "003"
+}
 
 
 # Quick-start development settings - unsuitable for production
